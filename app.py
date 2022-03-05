@@ -13,7 +13,7 @@ gwtc3m=pd.read_csv("data/GWTC-3-marginal.csv")
 #gwtc = pd.concat([gwtc1,gwtc2,gwtc21,gwtc3m])
 #gwtc = gwtc.drop(columns=['pastro_cWB','pastro_GstLAL','pastro_MBTA','pastro_PyCBC','pastro_PyCBCBBH'])
 gwtc = pd.concat([gwtc3,gwtc3m])
-df2 = gwtc.sort_values('Name')
+df2 = gwtc.sort_values('Name').astype(str)
 
 st.write('## GWTC correspondence table')
 st.write("Total {} candidates".format(len(df2)))
