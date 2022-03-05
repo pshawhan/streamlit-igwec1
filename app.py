@@ -1,5 +1,6 @@
 #-- Peter's first streamlit attempt, with thanks to Jonah for example
 import streamlit as st
+import pandas as pd
 
 gwtc1=pd.read_csv("data/GWTC-1.csv")
 gwtc2=pd.read_csv("data/GWTC-2.csv")
