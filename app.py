@@ -79,8 +79,6 @@ df = pd.DataFrame( { 'Name':names, 'Run':[run[n] for n in names],
 #-- See https://stackoverflow.com/questions/69578431/how-to-fix-streamlitapiexception-expected-bytes-got-a-int-object-conver
 df2 = df.astype(str)
 
-st.write('## GWTC correspondence table')
+st.write('## GWTC event candidate correspondence table')
 st.write("Total {} candidates".format(len(df2)))
-st.write("Shape: {}".format(df2.shape))
-st.write("Data types: {}".format(df2.dtypes))
-st.dataframe(df2)
+st.dataframe(df2,height=500)
