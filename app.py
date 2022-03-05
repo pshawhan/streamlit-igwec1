@@ -10,7 +10,7 @@ gwtc3=pd.read_csv("data/GWTC-3.csv")
 gwtc3m=pd.read_csv("data/GWTC-3-marginal.csv")
 
 #gwtc = pd.concat([gwtc1,gwtc2,gwtc21,gwtc21m,gwtc3,gwtc3m])
-gwtc = pd.concat([gwtc1,gwtc2,gwtc21])
+gwtc = pd.concat([gwtc1,gwtc2,gwtc21,gwtc21m])
 df2 = gwtc21.sort_values('Name')
 
 st.write('## GWTC correspondence table')
