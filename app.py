@@ -11,8 +11,9 @@ gwtc3m=pd.read_csv("data/GWTC-3-marginal.csv")
 
 #gwtc = pd.concat([gwtc1,gwtc2,gwtc21,gwtc21m,gwtc3,gwtc3m])
 gwtc = pd.concat([gwtc1,gwtc2,gwtc21,gwtc3m])
+gwtc = gwtc.drop('pastro_cWB')
 df2 = gwtc.sort_values('Name')
 
 st.write('## GWTC correspondence table')
-st.write("Total {} candidates".format(len(gwtc)))
+st.write("Total {} candidates".format(len(df2)))
 st.dataframe(df2)
