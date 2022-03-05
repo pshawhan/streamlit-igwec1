@@ -70,8 +70,8 @@ for n in n3m:
     gwtc3[n] = 'marginal'
 
 #-- Build a DataFrame from all of those
-ns = sorted(run.keys())
-df = pd.DataFrame( { 'Name':ns, 'Run':[run[n] for n in names],
+names = sorted(run.keys())
+df = pd.DataFrame( { 'Name':names, 'Run':[run[n] for n in names],
     'GWTC-1':[gwtc1[n] for n in names], 'GWTC-2':[gwtc2[n] for n in names],
     'GWTC-2.1':[gwtc21[n] for n in names], 'GWTC-3':[gwtc3[n] for n in names] } )
 
