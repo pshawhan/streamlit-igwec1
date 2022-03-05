@@ -9,10 +9,9 @@ gwtc21m=pd.read_csv("data/GWTC-2.1-marginal.csv")
 gwtc3=pd.read_csv("data/GWTC-3.csv")
 gwtc3m=pd.read_csv("data/GWTC-3-marginal.csv")
 
-#gwtc = pd.concat([gwtc1,gwtc2,gwtc21,gwtc21m,gwtc3,gwtc3m])
-#gwtc = pd.concat([gwtc1,gwtc2,gwtc21,gwtc3m])
-#gwtc = gwtc.drop(columns=['pastro_cWB','pastro_GstLAL','pastro_MBTA','pastro_PyCBC','pastro_PyCBCBBH'])
-gwtc = pd.concat([gwtc3,gwtc3m])
+gwtc = pd.concat([gwtc1,gwtc2,gwtc21,gwtc21m,gwtc3,gwtc3m])
+#-- The "astype(str)" here is to work around a bug introduced in streamlit 0.85
+#-- See https://stackoverflow.com/questions/69578431/how-to-fix-streamlitapiexception-expected-bytes-got-a-int-object-conver
 df2 = gwtc.sort_values('Name').astype(str)
 
 st.write('## GWTC correspondence table')
