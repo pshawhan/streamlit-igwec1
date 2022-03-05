@@ -16,5 +16,5 @@ df2 = gwtc.sort_values('Name')
 
 st.write('## GWTC correspondence table')
 st.write("Total {} candidates".format(len(df2)))
-st.write("Shape: {}".df2.shape)
+st.write("Shape: {}".format(df2.shape))
 #st.dataframe(df2)
