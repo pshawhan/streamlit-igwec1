@@ -14,4 +14,4 @@ gwtc = pd.concat([gwtc1,gwtc2,gwtc21,gwtc21m,gwtc3,gwtc3m])
 
 st.write('## GWTC correspondence table')
 st.write("Total {} candidates",format(len(gwtc)))
-st.dataframe(gwtc.sort('Name'))
+st.dataframe(gwtc.sort_values('Name'))
